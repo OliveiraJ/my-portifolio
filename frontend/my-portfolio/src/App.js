@@ -1,29 +1,21 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { Profile } from "./components/profile/index";
+import { MainWrapper } from "./shared/section/wrapper";
 
 const GlobalStyle = createGlobalStyle`
 	*{
 		padding: 0;
 		margin: 0;
 		box-sizing: border-box;
-		background-color: #12121e;
+		background-color: #121212;
 	}
-`;
-
-const MainWrapper = styled.div``;
-
-const Title = styled.h1`
-	font-size: 1.5em;
-	text-align: center;
-	color: #ce86e7;
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
 `;
 
 function App() {
 	return (
 		<MainWrapper>
+			<Profile />
 			<GlobalStyle />
-			<Title>Hello World!</Title>
 		</MainWrapper>
 	);
 }
