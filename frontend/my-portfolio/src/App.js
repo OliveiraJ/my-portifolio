@@ -7,7 +7,8 @@ const GlobalStyle = createGlobalStyle`
 		padding: 0;
 		margin: 0;
 		box-sizing: border-box;
-		background-color: #121212;
+		background-color: #2D3047;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	}
 `;
 
