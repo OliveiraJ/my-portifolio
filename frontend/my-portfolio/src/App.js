@@ -1,23 +1,20 @@
-import styled, { createGlobalStyle } from "styled-components";
-import { Profile } from "./components/profile/index";
-import { MainWrapper } from "./shared/section/wrapper";
+import { GlobalStyle } from "./foundation/global/index";
+import { TopBar } from "./components/title-bar";
+import { ThemeProvider } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
-	*{
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-		background-color: #2D3047;
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	}
-`;
+import { darkTheme, lightTheme } from "./foundation/global/themes";
 
 function App() {
 	return (
-		<MainWrapper>
-			<Profile />
-			<GlobalStyle />
-		</MainWrapper>
+		<ThemeProvider theme={darkTheme}>
+			<div>
+				<GlobalStyle />
+				{/* <button value={theme} onClick={handleClick}>
+					Mude o tema
+				</button> */}
+				<TopBar />
+			</div>
+		</ThemeProvider>
 	);
 }
 
