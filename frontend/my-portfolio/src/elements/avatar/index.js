@@ -7,8 +7,8 @@ const Avatar = styled.img`
 		width: 10em;
 	}
 	width: 6em;
-	margin: 5px 20px;
-	border-radius: 10%;
+	margin-right: 20px;
+	border-radius: 6px;
 `;
 
 export { Avatar };

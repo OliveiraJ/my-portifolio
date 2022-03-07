@@ -7,47 +7,47 @@ import {
 	FiMail,
 } from "react-icons/fi";
 
-const SocialIconsStyled = styled.div`
+const StyledSocialIcons = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin-top: 10px;
 `;
 
-const ListStyled = styled.li`
+const StyledList = styled.li`
 	border: 2px solid ${props => props.theme.color};
-	border-radius: 10%;
+	border-radius: 3px;
 	padding: 5px 8px 1px 8px;
 	margin: 0px 10px 0px 0px;
 `;
 
 export default function SocialIcons() {
 	return (
-		<SocialIconsStyled>
-			<ListStyled>
+		<StyledSocialIcons>
+			<StyledList>
 				<a href='https://github.com/OliveiraJ'>
 					<FiGithub />
 				</a>
-			</ListStyled>
-			<ListStyled>
+			</StyledList>
+			<StyledList>
 				<a href='https://gitlab.com/OliveiraJordan'>
 					<FiGitlab />
 				</a>
-			</ListStyled>
-			<ListStyled>
+			</StyledList>
+			<StyledList>
 				<a href='https://www.linkedin.com/in/jordansoliveira/'>
 					<FiLinkedin />
 				</a>
-			</ListStyled>
-			<ListStyled>
+			</StyledList>
+			<StyledList>
 				<a href='https://twitter.com/JordanSOliveira'>
 					<FiTwitter />
 				</a>
-			</ListStyled>
-			<ListStyled>
+			</StyledList>
+			<StyledList>
 				<a href='jordansvaoliveira@gmail.com'>
 					<FiMail />
 				</a>
-			</ListStyled>
-		</SocialIconsStyled>
+			</StyledList>
+		</StyledSocialIcons>
 	);
 }
