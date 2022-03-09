@@ -5,6 +5,9 @@ import SocialIcons from "../../elements/icons/index";
 import ThemeSwitcher from "../../elements/theme-switcher";
 
 const TitleBar = styled.header`
+	@media screen and (min-width: 600px) {
+		max-height: 90vh;
+	}
 	display: flex;
 	align-content: center;
 	align-items: center;

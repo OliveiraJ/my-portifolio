@@ -14,7 +14,7 @@ const StyledSocialIcons = styled.div`
 `;
 
 const StyledList = styled.li`
-	border: 2px solid ${props => props.theme.color};
+	border: 1px solid ${props => props.theme.color};
 	border-radius: 3px;
 	padding: 5px 8px 1px 8px;
 	margin: 0px 10px 0px 0px;
