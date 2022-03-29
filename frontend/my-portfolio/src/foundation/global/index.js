@@ -11,13 +11,6 @@ const GlobalStyle = createGlobalStyle`
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 
-	body{
-
-		display: grid;
-		align-items: center;
-		justify-items: center;
-		/* background: ${props => props.theme.background}; */
-	 	}
 	li{
 		list-style: none ;
 	}

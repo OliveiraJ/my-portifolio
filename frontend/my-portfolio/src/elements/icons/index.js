@@ -1,4 +1,7 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { rotateIn } from "react-animations";
+import { Settings } from "@styled-icons/feather/Settings";
+
 import {
 	FiGithub,
 	FiGitlab,
@@ -20,7 +23,7 @@ const StyledList = styled.li`
 	margin: 0px 10px 0px 0px;
 `;
 
-export default function SocialIcons() {
+function SocialIcons() {
 	return (
 		<StyledSocialIcons>
 			<StyledList>
@@ -51,3 +54,22 @@ export default function SocialIcons() {
 		</StyledSocialIcons>
 	);
 }
+
+const settingsAnimation = keyframes`${rotateIn}`;
+
+const StyledSettings = styled(Settings)`
+	@media screen and (min-width: 500px) {
+		&:hover {
+			animation: 0.7s ${settingsAnimation};
+		}
+	}
+	&:active {
+		animation: 0.7s ${settingsAnimation};
+		transition-property: animation;
+		transition-duration: 1s;
+	}
+	background-color: inherit;
+	cursor: pointer;
+`;
+
+export { StyledSettings, SocialIcons };

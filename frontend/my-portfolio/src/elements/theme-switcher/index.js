@@ -1,16 +1,28 @@
-import { FiMoon, FiSun } from "react-icons/fi";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { Moon } from "@styled-icons/feather/Moon";
+import { Sun } from "@styled-icons/feather/Sun";
+import { slideInRight } from "react-animations";
 
-const StyledThemeSwitcher = styled.span`
-	align-self: flex-start;
-	font-size: 1.5em;
-	color: ${props => props.theme.changeThemeIconColor};
+const themeSwitcherAnimation = keyframes`${slideInRight}`;
+
+const StyledMoon = styled(Moon)`
+	animation: 0.3s ${themeSwitcherAnimation};
+	background-color: transparent;
+	cursor: pointer;
+	margin-right: 8px;
+`;
+
+const StyledSun = styled(Sun)`
+	animation: 0.3s ${themeSwitcherAnimation};
+	background-color: transparent;
+	cursor: pointer;
+	margin-right: 8px;
 `;
 
 export default function ThemeSwitcher(props) {
-	return (
-		<StyledThemeSwitcher onClick={props.handleThemeSwitch}>
-			{props.isDark ? <FiSun /> : <FiMoon />}
-		</StyledThemeSwitcher>
+	return props.isDark ? (
+		<StyledSun onClick={props.handleThemeSwitch} size='25' />
+	) : (
+		<StyledMoon onClick={props.handleThemeSwitch} size='25' />
 	);
 }

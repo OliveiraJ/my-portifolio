@@ -2,12 +2,23 @@
 import styled from "styled-components";
 
 const CardStyled = styled.div`
-	margin: 10px;
-	/* border: 1px solid ${props => props.theme.secondaryColor}; */
+	margin: 5px;
 	border-radius: 3px;
 	padding: 10px;
-	max-width: 330px;
+	@media screen and (min-width: 600px) {
+		max-width: 200px;
+		max-height: 150px;
+		overflow: hidden;
+		:hover {
+			filter: brightness(85%);
+		}
+		/* box-shadow: 1px 0.5px 0.5px 0.5px black; */
+	}
+	max-width: 97%;
 	background-color: ${props => props.theme.cardBackground};
+	flex: 1 1 auto;
+	word-wrap: break-word;
+	word-break: break-word;
 `;
 
 const ProjectDescription = styled.p`

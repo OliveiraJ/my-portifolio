@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { Avatar } from "../../elements/avatar";
 import { Title, Subtitle } from "../../elements/text";
-import SocialIcons from "../../elements/icons/index";
-import ThemeSwitcher from "../../elements/theme-switcher";
+import { SocialIcons } from "../../elements/icons/index";
 
-const TitleBar = styled.header`
+const TitleBar = styled.div`
 	@media screen and (min-width: 600px) {
-		max-height: 90vh;
+		flex-direction: column;
 	}
 	display: flex;
 	align-content: center;
@@ -14,18 +13,20 @@ const TitleBar = styled.header`
 	margin-bottom: 30px;
 `;
 
-function TopBar({ handleThemeSwitch, isDark }) {
+function AboutMe() {
 	return (
 		<TitleBar>
-			<Avatar src='https://github.com/OliveiraJ.png' />
+			<Avatar
+				src='https://github.com/OliveiraJ.png'
+				alt='Jordan Silva Oliveira'
+			/>
 			<div>
 				<Title>Jordan</Title>
 				<Subtitle>Silva Oliveira</Subtitle>
 				<SocialIcons />
 			</div>
-			<ThemeSwitcher handleThemeSwitch={handleThemeSwitch} isDark={isDark} />
 		</TitleBar>
 	);
 }
 
-export { TopBar };
+export { AboutMe };

@@ -1,11 +1,12 @@
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./foundation/global/index";
-import { MainContainer } from "./elements/containers";
-import { TopBar } from "./components/title-bar";
+import { MainWarapper, ContentWrapper } from "./elements/containers";
+import { AboutMe } from "./components/about-me";
 import Portifolio from "./components/portfolio";
 import { Footer } from "./components/footer";
 import { darkTheme, lightTheme } from "./foundation/global/themes";
 import { useState } from "react";
+import TopBar from "./components/top-bar";
 
 function App() {
 	const [theme, setTheme] = useState(lightTheme);
@@ -19,12 +20,14 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
-			<MainContainer>
-				{/* <ThemeSwitcher handleThemeSwitch={handleThemeSwitch} isDark={isDark} /> */}
+			<MainWarapper>
 				<TopBar handleThemeSwitch={handleThemeSwitch} isDark={isDark} />
-				<Portifolio />
+				<ContentWrapper>
+					<AboutMe />
+					<Portifolio />
+				</ContentWrapper>
 				<Footer />
-			</MainContainer>
+			</MainWarapper>
 		</ThemeProvider>
 	);
 }

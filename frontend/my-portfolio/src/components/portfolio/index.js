@@ -3,6 +3,17 @@ import Card from "../../elements/cards";
 import { useState, useEffect } from "react";
 
 const PortifolioStyled = styled.div`
+	@media screen and (min-width: 600px) {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		::-webkit-scrollbar {
+			/*-webkit browsers*/
+			display: none;
+		}
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
 	border: 2px solid ${props => props.theme.secondaryColor};
 	border-radius: 4px;
 	width: 100%;

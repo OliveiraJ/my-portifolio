@@ -1,7 +1,8 @@
 const darkTheme = {
-	backgroundColor: "#121212",
+	backgroundColor: "#000",
 	//background: "linear-gradient(to top,#121212, #333533)",
-	color: "#8963BA",
+	// color: "#8963BA",
+	color: "#754ed9",
 	secondaryColor: "#D6D6D6",
 	cardBackground: "#1F1F1F",
 };

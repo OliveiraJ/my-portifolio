@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Avatar = styled.img`
 	@media screen and (min-width: 600px) {
-		width: 10em;
+		width: 12em;
 	}
 	width: 6em;
 	margin-right: 20px;
